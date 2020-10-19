@@ -1,0 +1,325 @@
+html{
+  height: 100%;
+}
+
+body{
+  width: 100%;
+  margin: 0;
+  height: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.div-header{
+  margin: 0;
+  width: 100%;
+}
+
+.div-title{
+  margin: 0;
+  padding-left: 30%;
+  width: 40%;
+  text-align: center;
+  display: inline-block;
+}
+
+.div-title p{
+  margin: 0;
+}
+
+.div-title p.p-h1{
+  padding: 20px 0 10px 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.div-title p.left-item-counter{
+  font-size: 1em;
+  color: #cecdd2;
+}
+
+.div-title-img{
+  display: inline-block;
+  width: 28%;
+  margin: 0;
+  text-align: right;
+  position: absolute;
+  top: 25px;
+}
+
+.div-title-img img{
+  width: 30px;
+  height: auto;
+  vertical-align: top;
+}
+
+.ul-select-list{
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  text-align: center;
+}
+
+div.div-select{
+  margin: 0;
+}
+
+
+.ul-select-list li{
+  display: inline-block;
+}
+
+.ul-select-list li a{
+  cursor: pointer;
+  margin: 0 20px 0 20px;
+  padding: 15px 20px 10px 15px;
+  color: #cecdd2;
+  display: inline-block;
+}
+
+.ul-select-list li a.selected {
+  color: #f25f5f;
+  border-bottom: thick solid #f25f5f;
+  border-radius: 5px;
+}
+
+.ul-todo-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ul-todo-list li{
+  margin: 20px 15px;
+}
+
+.ul-todo-list li .toggle{
+  text-align: center;
+  width: 40px;
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none; /* Mobile Safari */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.ul-todo-list li{
+  position: relative;
+}
+
+.ul-todo-list li:last-child div{
+  border-bottom: none;
+}
+
+.ul-todo-list li .toggle:after{
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#78c328" stroke-width="3"/></svg>');
+}
+
+.ul-todo-list li .toggle:checked:after{
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="40" fill="#78c328" stroke="#ffffff" stroke-width="3"/><path fill="#ffffff" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+.ul-todo-list li label{
+  white-space: pre-line;
+  word-break: break-all;
+  padding: 0 60px 15px 15px;
+  margin-left: 45px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+}
+
+.todo-item{
+  padding-bottom: 15px;
+  border-bottom: thin solid #e4eade;
+}
+
+.ul-todo-list li label.todo-item-title{
+  color: #303030;
+  font-size: 1.5em;
+}
+
+.ul-todo-list li label.todo-item-data{
+  color: #737373;
+  font-size: 1em;
+}
+
+.ul-todo-list li.completed label.todo-item-title{
+  color: #a6a6a7;
+  text-decoration: line-through;
+}
+
+.ul-todo-list li.completed label.todo-item-data{
+  color: #a6a6a7;
+}
+
+.ul-todo-list li .destroy{
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  color: #bde098;
+  font-size: 40px;
+  transition: color 0.2s ease-out;
+  display: none;
+  outline: none;
+}
+
+.ul-todo-list li .destroy:hover{
+  color: #78c328;
+}
+
+.ul-todo-list li .destroy:after{
+  content: '×';
+}
+
+.ul-todo-list li:hover .destroy{
+  display: block;
+}
+
+.div-edit{
+  position: absolute;
+  top: 200px;
+  left: 10%;
+  width: 80%;
+  box-shadow: 0 4px 30px 0 #c7b8b8;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: none;
+  z-index: 2;
+}
+
+.div-edit button.btn-close{
+  background-color: #f25f5f;
+  border-radius: 0 15px 0 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  height: 45px;
+  width: 15%;
+  left: 85%;
+  outline:none;
+  position: relative;
+  top: 0px;
+}
+
+.div-edit-title{
+  margin: 10px 0;
+}
+
+.div-edit-title label{
+  position: relative;
+  left: 10%;
+  color: #a6a6a7;
+}
+
+.div-edit-title input{
+  box-sizing: border-box;
+  text-align:left;
+  height:40px;
+  border:1px solid #e2e2e2;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display:block;
+  outline:0;
+  text-decoration:none;
+  width: 80%;
+  left: 10%;
+  position: relative;
+  margin-top: 10px;
+  font-size: 1.5em;
+  padding-left: 5px;
+  color: #686869;
+}
+
+
+.div-edit button.btn-edit{
+  background-color: #f25f5f;
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  height: 40px;
+  width: 60%;
+  left: 20%;
+  outline:none;
+  top: 240px;
+  position: absolute;
+}
+
+
+
+.triangle{
+  /**实现三角形的角朝上**/
+  width:0;
+  height:0;
+  border-top:15px solid transparent;
+  border-left:15px solid transparent;
+  border-bottom:15px solid #ffffff;
+  border-right:15px solid transparent;
+  position: relative;
+  left: 155px;
+}
+
+.div-title-menu-box{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  z-index: 2;
+  border-radius: 10px;
+  display: none;
+}
+
+.div-title-menu{
+  background-color: #ffffff;
+  height: 180px;
+}
+
+.ul-title-list{
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+}
+
+.ul-title-list li{
+  padding: 15px 0 10px 20px;
+}
+
+.ul-title-list li label{
+  padding: 0 10px;
+}
+
+div#box{
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  position: absolute;
+  top: 0;
+  display: none;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+

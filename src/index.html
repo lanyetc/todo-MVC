@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  <script src="js/propagating.js"></script>
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <!--<p>Hello world! This is HTML5 Boilerplate.</p>-->
+  <!--<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>-->
+  <!--<script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>-->
+  <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>-->
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/model.js"></script>
+  <script src="js/localStorage.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <div class="div-header">
+    <div class="div-title">
+      <p class="p-h1">TODO</p>
+      <p class="left-item-counter">Nothing Todo</p>
+    </div>
+    <div class="div-title-img"><img src="img/menu.png" /></div>
+    <div class="div-title-menu-box">
+      <div class="triangle"></div>
+      <div class="div-title-menu">
+        <ul class="ul-title-list">
+          <li class="add">
+            <img src="img/add.png">
+            <label>Add Todo</label>
+          </li>
+          <li class="remove">
+            <img src="img/remove.png">
+            <label>Clear Completed</label>
+          </li>
+          <li class="toggle-all">
+            <img src="img/right.png">
+            <label>Toggle All</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div-select">
+    <ul class="ul-select-list">
+      <li>
+        <a class="selected">ALL</a>
+      </li>
+      <li>
+        <a class="">ACTIVE</a>
+      </li>
+      <li>
+        <a class="">COMPLETED</a>
+      </li>
+    </ul>
+  </div>
+  <div class="div-list-container">
+    <ul class="ul-todo-list">
+    </ul>
+  </div>
+
+  <div class="div-edit">
+
+    <button class="btn-close">
+      <img src="img/cancel.png">
+    </button>
+
+    <div class="div-edit-title">
+      <label>TITLE</label>
+      <input class="input-title" type="text"/>
+    </div>
+
+    <div class="div-edit-title">
+      <label>DATA</label>
+      <input id="data-selector"/>
+    </div>
+
+    <button class="btn-edit">CONFIRM</button>
+  </div>
+
+
+  <div id="box"></div>
+</body>
+
+
+</html>
