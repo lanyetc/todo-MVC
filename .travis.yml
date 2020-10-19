@@ -2,6 +2,9 @@
 # in this file, please see the Travis CI documentation:
 # https://docs.travis-ci.com
 
+script:
+ - npm install
+
 after_success:
   - |
 
